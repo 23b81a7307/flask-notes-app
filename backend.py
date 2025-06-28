@@ -20,6 +20,9 @@ def init_db():
     conn.close()
 
 init_db()
+@app.route('/')
+def home():
+    return render_template('design.html')
 
 @app.route('/api/notes', methods=['GET'])
 def get_notes():
